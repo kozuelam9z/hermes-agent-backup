@@ -3,17 +3,17 @@
 Automated backup of all Hermes Agent skills and tools.
 
 ## Latest Backup
-- **Date**: 2026-05-08 22:00:36
+- **Date**: 2026-05-08
 - **Skills**: 104 skill directories
-- **File**: backup_20260508_220035.tar.gz
+- **File**: backup_20260508.tar.gz
 
 ## Backup Archives
-All backups are timestamped tar.gz archives of /opt/data/skills/
+One backup per day. Filename format: 
 
 ## Restore
 ```bash
-tar -xzf backup_YYYYMMDD_HHMMSS.tar.gz
+tar -xzf backup_YYYYMMDD.tar.gz -C /opt/data
 ```
 
 ## Auto-Backup
-Cron job runs hourly at minute 0. Pushes new backups to this repo automatically.
+Cron job runs hourly. One backup per day — same filename is overwritten daily and pushed to this repo automatically.
