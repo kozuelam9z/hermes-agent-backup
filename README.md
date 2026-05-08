@@ -1,14 +1,19 @@
 # Hermes Agent Backup
 
-Automated backup of all Hermes Agent skills, tools, and configurations.
+Automated backup of all Hermes Agent skills and tools.
 
-## Contents
-- Skills: `/skills/` directory with all skill definitions
-- Backups: Timestamped archives of skills directory
-- Monitor: `skill-monitor.sh` for automated backup detection
+## Latest Backup
+- **Date**: 2026-05-08 19:29:54
+- **Skills**: 104 skill directories
+- **File**: backup_20260508_192954.tar.gz
 
-## Last Updated
-$(date '+%Y-%m-%d %H:%M:%S')
+## Backup Archives
+All backups are timestamped tar.gz archives of /opt/data/skills/
 
-## About
-This repository backs up all skills and tools from the Hermes Agent deployment at `/opt/data/skills/`.
+## Restore
+```bash
+tar -xzf backup_YYYYMMDD_HHMMSS.tar.gz
+```
+
+## Auto-Backup
+Cron job runs hourly at minute 0. Pushes new backups to this repo automatically.
