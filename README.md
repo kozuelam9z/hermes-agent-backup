@@ -8,10 +8,10 @@ Automated backup of all Hermes Agent skills and tools.
 - **File**: backup_20260508.tar.gz
 
 ## Backup Archives
-One backup per day. Filename format: 
+One backup per day. Filename format: `backup_YYYYMMDD.tar.gz`
 
 ## Restore
-```bash
+```
 tar -xzf backup_YYYYMMDD.tar.gz -C /opt/data
 ```
 
